@@ -23,7 +23,3 @@ function XO(str) {
 }
 
 
-XO('hola') 
-a = 'xoOx' 
-console.log(a.split(''))
-console.log(XO(a))
