@@ -23,18 +23,3 @@ function rgb(r, g, b) {
 
     return (rr + gg + bb );
 }
-
-yourNumber= 61
-hexString = yourNumber.toString(16);
-
-console.log(hexString.toUpperCase())
-console.log(rgb(11,193,216))
-r=12
-g=13
-v=14
-     a = r.toString(16).toUpperCase() 
-     b = g.toString(16).toUpperCase() 
-     c = b.toString(16).toUpperCase() 
-    return ("#" + a + b + c + "#");
-
-console.log(c)
