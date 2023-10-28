@@ -1,4 +1,4 @@
-
+// https://www.codewars.com/kata/545cedaa9943f7fe7b000048
 
 function isPangram(string){
     A1 = "abcdefghijklmnopqrstuvwxyz" // Abecedario
@@ -27,11 +27,7 @@ function isPangram(string){
     }
      }
  }
-xxxx = isPangram("The quick brown fox jumps over the lazy dog.")
-console.log(xxxx)
 
-x1 = isPangram("Cwm fjord bank glyphs vext quiz")
-console.log(x1)
 
 
 alpha = "abcdefghijklmnopqrstuvwxyz."
