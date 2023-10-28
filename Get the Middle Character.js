@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/56747fd5cb988479af000028
+
 function getMiddle(s){
     p = s.split('') // Para dividir el string en un array que comienza con [0]
     
@@ -13,9 +15,3 @@ function getMiddle(s){
     }
 }
 
-  console.log(getMiddle('a'))
-  xx = 'xas'
-  xs = xx.split('')
-  l = xs.length
-  console.log(l)
-  console.log(getMiddle(xx))
