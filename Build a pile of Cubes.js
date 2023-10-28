@@ -13,9 +13,3 @@ function findNb(m) {
     return -1;
 }
 
-
-h = findNb(1071225)
-console.log(h)
-
-
-console.log("holxadfs")
