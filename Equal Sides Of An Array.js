@@ -1,3 +1,6 @@
+// https://www.codewars.com/kata/5679aa472b8f57fb8c000047
+
+
 function findEvenIndex(arr)
 {
   N = 0
@@ -41,22 +44,3 @@ function findEvenIndex(arr)
   return -1;
 }
 
-a = "hola"
-
-console.log(a.slice(2))
-
-var s = [20,10,-80,10,10,15,35];
-var p = s.slice(0,1);
-var x = s.slice(1);
-console.log(p);
-console.log(x);
-ss=0;
-for (let f of x){ 
-    ss += f;
-  }
-  console.log(ss)
-
- a = findEvenIndex([20,10,-80,10,10,15,35])
- console.log(a)
-vv = [20,10,-80,10,10,15,35];
- k = console.log(vv[9])
