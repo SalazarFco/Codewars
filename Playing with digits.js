@@ -1,4 +1,4 @@
-// Subido el 26-10-2023
+// https://www.codewars.com/kata/5552101f47fc5178b1000050
 
 function digPow(n, p){
     const a = Array.from(String(n), Number) // Se obtiene un array donde cada elemento es un dígito del número n
@@ -20,15 +20,3 @@ function digPow(n, p){
   }
 
 
-  // Lo de abajo es para comprobar distias cosas
-
-  const a = Array.from(String(33), Number);
-
-  console.log(a)
-  console.log(Number.isInteger(89/1))
-  console.log(a.length)
-  b = digPow(89, 1)
-  console.log(digPow(89, 1))
-  console.log(digPow(92, 1))
-  console.log(digPow(695, 2))
-  console.log(digPow(46288, 3))
