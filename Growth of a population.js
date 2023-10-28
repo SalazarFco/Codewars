@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/563b662a59afc2b5120000c6
+
 function nbYear(p0, percent, aug, p) {
     i = 0;
     while(true){
@@ -14,9 +16,3 @@ function nbYear(p0, percent, aug, p) {
     }
   }
   
-  a = nbYear(1500, 5, 100, 5000) 
-  b = nbYear(1500000, 2.5, 10000, 2000000)
-  c = nbYear(1500000, 0.25, 1000, 2000000)
-  console.log(a)
-  console.log(b)
-  console.log(c)
