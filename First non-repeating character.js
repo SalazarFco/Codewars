@@ -25,13 +25,3 @@ function firstNonRepeatingLetter(s) {
 
 
   }
-
-g = "dmaahdmaahqajnqajnyqy7uyqy7umwnqmwnqm313m313sgys9sgys9szbaszban6pxn6pxypb64gypb64glhtwlhtws7q2os7q2o0"
-ss = g.split("")
-ss1 = ss.slice(1,ss.length)
-ss3 = kk.slice(0, 1).concat(kk.slice(1 + 1))
-console.log(ss1.includes(ss[0]))
-console.log(ss1)
- x = firstNonRepeatingLetter(g)
-
- console.log(x)
