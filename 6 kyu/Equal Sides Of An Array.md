@@ -1,43 +1,83 @@
-<a href="https://www.codewars.com/kata/52bc74d4ac05d0945d00054e"> Problem link </a>
+<a href="https://www.codewars.com/kata/5679aa472b8f57fb8c000047"> Problem link </a>
 
 **DESCRIPTION:**
 
-Write a function named ```first_non_repeating_letter``` that takes a string input, and returns the first character that is not repeated anywhere in the string.
+You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
 
-For example, if given the input ```'stress'```, the function should return ```'t'```, since the letter t only occurs once in the string, and occurs first in the string.
+**For example:**
 
-As an added challenge, upper- and lowercase letters are considered the same character, but the function should return the correct case for the initial letter. For example, the input ```'sTreSS'``` should return ```'T'```.
+Let's say you are given the array ```{1,2,3,4,3,2,1}```:
 
-If a string contains all repeating characters, it should return an empty string (```""```) or None ```--``` see sample tests.
+Your function will return the index ```3```, because at the 3rd position of the array, the sum of left side of the index (```{1,2,3}```) and the sum of the right side of the index (```{3,2,1}```) both equal ```6```.
+
+Let's look at another one.<br>
+You are given the array ```{1,100,50,-51,1,1}```:<br>
+Your function will return the index ```1```, because at the 1st position of the array, the sum of left side of the index (```{1}```) and the sum of the right side of the index (```{50,-51,1,1}```) both equal ```1```.
+
+Last one:
+
+You are given the array ```{20,10,-80,10,10,15,35}```<br>
+At index 0 the left side is ```{}```<br>
+The right side is ```{10,-80,10,10,15,35}```<br>
+They both are equal to ```0``` when added. (Empty arrays are equal to 0 in this problem)<br>
+Index 0 is the place where the left side and right side are equal.<br>
+
+Note: Please remember that in most programming/scripting languages the index of an array starts at 0.
+
+Input:<br>
+An integer array of length ```0 < arr < 1000```. The numbers in the array can be any integer positive or negative.
+
+Output:<br>
+The lowest index ```N``` where the side to the left of ```N``` is equal to the side to the right of ```N```. If you do not find an index that fits these rules, then you will return ```-1```.
+
+Note:<br>
+If you are given an array with multiple answers, return the lowest correct index.
 
 **Solution:**
 
 ```
 
-function firstNonRepeatingLetter(s) {
-  var kk = s.split("") // Se pasa el string a un array "hola" = ['h','o','l','a']
-  var kk1 = s.toLowerCase().split("") // Se crea un array pero se aseguta que todan sean minúsculas por la igualdad
-  
+function findEvenIndex(arr)
+{
+  N = 0
+  while(N <= arr.length){
+    sumi = 0;
+    sumd = 0;
+      if (N===0)  {  // Sin contar el primer dígito (igual a 0)
+          for (let der of arr.slice(1)){ 
+            sumd += der;
+          }
+          if (sumd === 0){
+            return N;
+          }
 
-    for (var i = 0; i < kk.length ; i++) {
+          } else if (N===arr.length) {   // Sin contar el último dígito (igual a 0)
+            for (let der of arr.slice(0,N-1)){ 
+                sumd += der;
+              }
+              if (sumd == 0){
+                return 0;
+              }
 
-      if(i === kk.length){  // Si se ha llegado al último elemento entonces este no se ha repetido nunca.
-        return kk[i+1] // Se devuelve en el elemento original donde no se ha aplicado la función minúsculas
+
+
+          } else {  // Todos los casos del medio
+      Izquierda =  arr.slice(0,N);
+      Derecha = arr.slice(N+1,arr.length);
+      
+      for (let izq of Izquierda){ 
+        sumi += izq;
       }
-      var sd = kk1.slice(0, i).concat(kk1.slice(i + 1)); // Se crea un nuevo array sin el elemento kk1[i]
-
-        if (!sd.includes(kk1[i])){ // Si el intervalo no contiene al elemento, entonces no se repite
-          return kk[i]; // Se devuelve en el elemento original donde no se ha aplicado la función minúsculas
-        }
-
-        
-        
-    }
-
-    return '';
-
-
-
+      for (let der of Derecha){ 
+        sumd += der;
+      }
+      if (sumi == sumd){
+        return N;
+      }
+      }
+      N = N+1;
   }
+  return -1;
+}
 
 ```
