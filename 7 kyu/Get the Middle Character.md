@@ -1,4 +1,4 @@
-<a href="https://www.codewars.com/kata/52bc74d4ac05d0945d00054e"> Problem link </a>
+<a href="https://www.codewars.com/kata/56747fd5cb988479af000028"> Problem link </a>
 
 **DESCRIPTION:**
 
