@@ -39,12 +39,12 @@ function snail(array) {
   if (array[0].length === 0) {return [];} // Si la entrada es [[]] devolver []
   while(contador <= N*N){
     if (array.length === 1) {kKk[contador]=array[0][0]; return kKk} // 
-        for (var i = 0; i <= array[0].length-1 ; i++) {  // Desde ezquina superior izquierda a esquina derecha
+        for (var i = 0; i <= array[0].length-1 ; i++) {  // Desde esquina superior izquierda a esquina derecha
           kKk[contador] = array[0][i]
           contador += 1; 
              }
 
-             array = array.splice(1,array.length) //Se corta la primera fila que ya sido ocupada en kKk
+             array = array.splice(1,array.length) //Se corta la primera fila que ya ha sido ocupada en kKk
              array =array[0].map((val, index) => array.map(row => row[row.length-1-index])); // Giro anti-horario de la matriz
            
 } return kKk
